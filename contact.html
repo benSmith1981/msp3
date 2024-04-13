@@ -64,28 +64,27 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
 
-                <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as
-                    possible!</p>
-
-                <form action="reviews.php" method="POST">
-                  <div class="overall_rating">
-                    <span class="num"><?=number_format($reviews_info['overall_rating'], 1)?></span>
-                    <span class="stars"><?=str_repeat('&#9733;', round($reviews_info['overall_rating']))?></span>
-                    <span class="total"><?=$reviews_info['total_reviews']?> reviews</span>
-                </div>
-                <a href="#" class="write_review_btn">Write Review</a>
-                <div class="write_review">
-                    <form>
-                        <input name="name" type="text" placeholder="Your Name" required>
-                        <input name="rating" type="number" min="1" max="5" placeholder="Rating (1-5)" required>
-                        <textarea name="content" placeholder="Write your review here..." required></textarea>
-                        <button type="submit">Submit Review</button>
+                    
+               
+                <div class="register" class="form-group floating-label-form-group controls">
+                    <h1>Review</h1>
+                    <form action="Register.php"   method ='POST' name="register_form" autocomplete="off">
+                        <label for="username">
+                            <i class="fas fa-user"></i>
+                        </label>
+                        <input type="text" name="username" placeholder="Username" id="username" required>
+                        <label for="review">
+                            <i class="fas fa-envelope"></i>
+                        </label>
+                        <input type="text" name="review" placeholder="Review" id="review" required>
+                        <input type="submit" value="Register">
                     </form>
                 </div>
-                </form>
+        </div>
+               
             </div>
         </div>
-    </div>
+    <div>
     
     <hr>
 
@@ -132,6 +131,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="static\js\clean-blog.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
     $("#copyright").text(new Date().getFullYear());
