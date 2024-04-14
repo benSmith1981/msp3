@@ -13,3 +13,12 @@
             alert('Review submitted successfully!');
         });
     });
+
+
+
+    $(document).getElementById("logoutBtn").addEventListener("click", function() {
+        // Implement your logout logic here
+        // For example, clear user tokens or redirect to a login page
+        alert("Logged out successfully!");
+    });
+
