@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for, ses
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY")
+app.secret_key = os.environ.get("SECRET_KEY", "secret_flask_key")
 
 
 
@@ -20,13 +20,6 @@ def about():
         data = json.load(json_data)
     return render_template("about.html", page_title="About", company=data)
 
-
-# @app.route("/about")
-# def about():
-#     data = []
-#     with open("data/restaurants.json", "r") as json_data:
-#         data = json.load(json_data)
-#     return render_template("about.html", page_title="Find great places to Eat and Drink", place=data)
 
 
 @app.route("/about/<member_name>")
@@ -77,4 +70,4 @@ if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
-        debug=True)
+        debug=False)
