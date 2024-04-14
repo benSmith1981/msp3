@@ -232,3 +232,60 @@ body {
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
+
+.user-name span {
+  color: #979797;
+  font-size: 0.8rem;
+}
+
+.reviews {
+  color: #f9d71c;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-comment p {
+  font-size: 0.9rem;
+  color: #4b4b4b;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+
+@media(max-width:1060px){
+  .testimonial-box{
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media(max-width:790px){
+  .testimonial-box {
+    width: 100%;
+  }
+  .testimonial-heading h1 {
+  font-size: 1.4rem;
+  }
+}
+
+@media(max-width:340px){
+  .box-top {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .reviews {
+    margin-top: 10px;
+  }
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #252525;
+}

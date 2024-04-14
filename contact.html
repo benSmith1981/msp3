@@ -64,15 +64,19 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
 
-                    
+                    <p>If you have visited one of the restaurants, please leave a review! </p>
                
                 <div class="register" class="form-group floating-label-form-group controls">
                     <h1>Review</h1>
-                    <form action="Register.php"   method ='POST' name="register_form" autocomplete="off">
+                    <form action="Authenticate.php"   method ='POST' name="register_form" autocomplete="off">
                         <label for="username">
                             <i class="fas fa-user"></i>
                         </label>
                         <input type="text" name="username" placeholder="Username" id="username" required>
+                        <label for="restaurant">
+                            <i class="fas fa-user"></i>
+                        </label>
+                        <input type="text" name="place" placeholder="Restaurant Visited" id="place" required>
                         <label for="review">
                             <i class="fas fa-envelope"></i>
                         </label>
