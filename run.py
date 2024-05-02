@@ -13,10 +13,10 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about")
+@app.route("/about", methods=["GET", "POST"])
 def about():
     data = []
-    with open("data/company.json", "r") as json_data:
+    with open("data/restaurants.json", "r") as json_data:
         data = json.load(json_data)
     return render_template("about.html", page_title="About", company=data)
 
@@ -44,11 +44,9 @@ def contact():
 def reviews():
     return render_template("reviews.html")
 
-
-
 @app.route('/login', methods =['GET', 'POST'])
 def login():
-    return render_template("login_form.php" , page_title="Login")
+    return render_template("login_form.html" , page_title="Login")
  
  
 @app.route('/logout')
